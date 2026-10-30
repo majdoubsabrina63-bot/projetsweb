@@ -1,0 +1,577 @@
+/*
+ * Atelier Développement Web 1 — CSS Atelier 2 : Flexbox et positionnement
+ * Fichier de départ à compléter par les étudiants.
+ *
+ * Consigne : remplacez chaque TODO par les propriétés CSS demandées dans le sujet.
+ * Les couleurs principales et quelques alignements de texte sont déjà fournis.
+ */
+
+/* ==================================================
+   ÉTAPE 1 : BASES CSS ET MODÈLE DE BOÎTE
+   ================================================== */
+
+/* TODO 1.1 : appliquer box-sizing: border-box à tous les éléments */
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  /* TODO 1.2 : marge nulle, police Arial avec sans-serif en secours,
+     couleur du texte et fond de page déjà fournis, interligne 1.6 */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: #ffffff;
+    line-height: 1.6;
+  /* TODO */
+}
+
+/* Titres des sections */
+h2 {margin-bottom: 10px;
+
+  /* TODO 1.3 : marge basse de 10px */
+  color: #173b57;
+  text-align: center;
+  /* TODO */
+}
+
+h3 {
+  /* TODO 1.3 : couleur du titre */
+  color: #173b57;
+}
+
+/* TODO 1.4 : supprimer le soulignement de tous les liens */
+a {
+  /* TODO */
+  text-decoration: none;
+}
+
+/* Bouton commun : liens et boutons */
+.btn {
+  /* TODO 1.5 : affichage en ligne-bloc, padding, bordure, coins arrondis */
+
+  display: inline-block;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #087f8c;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* TODO 1.5 : texte gras, curseur main, transition du fond sur 0.3s */
+  /* TODO */
+}
+
+/* TODO 1.6 : au survol, changer le fond du bouton */
+.btn:hover {
+  /* TODO */
+  background-color: #065d68;
+}
+
+/* TODO 1.6 : au focus clavier, ajouter un contour jaune décalé */
+.btn:focus {
+  /* TODO */
+  outline: 3px solid #f4b942;
+  outline-offset: 3px;
+}
+
+/* Variante secondaire du bouton */
+.btn-secondaire {
+  /* TODO 1.7 : fond clair et texte bleu marine */
+  background-color: #e8f1f5;
+  color: #173b57;
+  /* TODO */
+}
+
+/* TODO 1.7 : couleur de fond au survol du bouton secondaire */
+.btn-secondaire:hover {
+  /* TODO */
+  background-color: #cbdfe8;
+}
+
+/* ==================================================
+   ÉTAPE 2 : NAVIGATION AVEC FLEXBOX
+   ================================================== */
+
+.entete {
+    background-color: #173b57;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  /* TODO 2.1 : position sticky, top à 0 et z-index à 10 */
+  /* TODO */
+}
+
+.barre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 14px 24px;
+  /* TODO 2.2 : activer Flexbox, aligner verticalement,
+     répartir les éléments aux deux extrémités et prévoir un écart de 20px */
+  /* TODO */
+  /* TODO 2.2 : largeur maximale 1150px, centrage et padding 14px 24px */
+  /* TODO */
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  /* TODO 2.3 : taille 24px et texte gras */
+  /* TODO */
+}
+
+/* Liste des liens de navigation */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  /* TODO 2.4 : activer Flexbox, aligner verticalement et définir un écart de 25px */
+  /* TODO */
+  /* TODO 2.4 : supprimer les puces, la marge et le padding */
+  /* TODO */
+  /* TODO 2.4 : utiliser des marges automatiques à gauche et à droite */
+  /* TODO */
+}
+
+.menu a {
+  color: #ffffff;
+  font-weight: bold;
+  /* TODO 2.5 : texte gras */
+  /* TODO */
+}
+
+/* TODO 2.5 : au survol, le texte des liens devient jaune */
+.menu a:hover {
+    color: #f4b942;
+  /* TODO */
+}
+
+.btn-nav {
+  /* TODO 2.6 : fond jaune et texte bleu marine */
+  background-color: #f4b942;
+  color: #173b57;
+  /* TODO */
+}
+
+/* TODO 2.6 : fond du bouton « Participer » au survol */
+.btn-nav:hover {
+  /* TODO */
+  background-color: #e2a525;
+}
+
+/* ==================================================
+   ÉTAPE 3 : BANNIÈRE, SECTIONS ET CARTES
+   ================================================== */
+
+/* 3.A — Bannière principale */
+.hero {
+  /* TODO 3.1 : position relative et hauteur minimale de 350px */
+  /* TODO */
+  /* TODO 3.1 : padding 75px 24px */
+  /* TODO */
+  /* TODO 3.1 : Flexbox pour centrer le contenu horizontalement et verticalement */
+  /* TODO */
+    position: relative;
+    min-height: 350px;
+    padding: 75px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(135deg, #173b57, #087f8c);
+
+  /* TODO 3.1 : dégradé linéaire à 135deg de #173b57 vers #087f8c */
+  /* TODO */
+}
+
+/* Contenu de la bannière */
+.hero-contenu {
+  /* TODO 3.2 : largeur maximale de 700px */
+  /* TODO */
+  max-width: 700px;
+}
+
+.hero h1 {
+  /* TODO 3.2 : marge 10px 0 et taille 46px */
+  /* TODO */
+  margin: 10px 0;
+  font-size: 46px;
+}
+
+.hero p {
+  /* TODO 3.2 : taille de police 18px */
+  /* TODO */
+  font-size: 18px;
+  
+}
+
+.hero .surtitre {
+  /* TODO 3.3 : couleur #f4d58d, taille 15px, gras et majuscules */
+  /* TODO */
+  font-size: 18px;
+  color: #f4d58d;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+/* Ruban placé dans le coin supérieur droit de la bannière */
+.ruban {
+  /* TODO 3.4 : position absolute, top 20px et right 20px */
+  /* TODO */
+  /* TODO 3.4 : padding 6px 14px et coins arrondis de 4px */
+  /* TODO */
+  /* TODO 3.4 : fond jaune, texte bleu marine et texte gras */
+  /* TODO */
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  background-color: #f4b942;
+  color: #173b57;
+  font-weight: bold;
+}
+
+/* 3.B — Sections générales */
+.section {
+  /* TODO 3.5 : padding 55px 24px */
+  /* TODO */
+  padding: 55px 24px;
+
+}
+
+.section-grise {
+  /* TODO 3.5 : fond #f3f6f8 */
+  /* TODO */
+  background-color: #f3f6f8;
+}
+
+.description {
+  /* TODO 3.6 : largeur maximale 700px */
+  /* TODO */
+  /* TODO 3.6 : marge 0 auto 30px et texte centré */
+ 
+  /* TODO */
+   max-width: 700px;
+   margin: 0 auto 30px;
+   text-align: center;
+}
+
+
+/* 3.C — Chiffres clés */
+.chiffres {
+  /* TODO 3.7 : Flexbox, éléments centrés horizontalement,
+     retour à la ligne autorisé et écart de 30px */
+  /* TODO */
+  /* TODO 3.7 : marge haute de 35px */
+  /* TODO */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.chiffre {
+  /* TODO 3.8 : Flexbox en colonne et éléments centrés */
+  /* TODO */
+  /* TODO 3.8 : largeur minimale 120px et padding 10px 25px */
+  /* TODO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  padding: 10px 25px;
+}
+
+/* TODO 3.9 : bordure gauche sur chaque .chiffre précédé d'un autre .chiffre */
+.chiffre + .chiffre {
+  /* TODO */
+  border-left: 2px solid #d7e2e8;                                                                                        
+}
+
+.chiffre strong {
+  /* TODO 3.9 : couleur #087f8c et taille 30px */
+  /* TODO */
+  color: #087f8c;
+  font-size: 30px;
+}
+
+.chiffre span {
+  /* TODO 3.9 : couleur #526570 */
+  /* TODO */
+  color: #526570;
+}
+
+/* 3.D — Grille des cartes d'ateliers */
+.ateliers {
+  /* TODO 3.10 : Flexbox, retour à la ligne, cartes centrées et écart de 24px */
+  /* TODO */
+  /* TODO 3.10 : largeur maximale 1150px et centrage horizontal */
+  /* TODO */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1150px;
+  margin: 0 auto;
+
+
+  
+}
+
+.atelier {
+  /* TODO 3.11 : position relative */
+  /* TODO */
+  /* TODO 3.11 : flex: 1 1 280px et largeur maximale 360px */
+  /* TODO */
+  /* TODO 3.11 : padding 30px 24px, puis padding supérieur de 45px */
+  /* TODO */
+  /* TODO 3.11 : fond blanc, bordure, coins arrondis et ombre */
+  position: relative;
+  flex: 1 1 280px;
+  max-width: 360px;
+  padding: 30px 24px;
+  padding-top: 45px;
+  background-color: #ffffff;
+  border: 1px solid #dce5e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  /* TODO */
+}
+
+.atelier p {
+  /* TODO 3.12 : couleur du texte #526570 */
+  /* TODO */
+  color:#526570;
+}
+
+.horaire {
+  /* TODO 3.12 : texte gras */
+  /* TODO */
+  font-weight: bold;
+}
+
+/* Badge placé dans le coin supérieur droit de la carte */
+.badge {
+  /* TODO 3.13 : position absolute, top 12px et right 12px */
+  /* TODO */
+  /* TODO 3.13 : padding 4px 9px et coins arrondis de 4px */
+  /* TODO */
+  /* TODO 3.13 : fond #e8f1f5, texte #173b57, taille 12px et texte gras */
+  /* TODO */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background-color: #e8f1f5;
+  color: #173b57;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.populaire {
+  /* TODO 3.14 : bordure 2px solid #087f8c et fond #f0fbfb */
+  /* TODO */
+  border:2px solid #087f8c;
+  background-color: #f0fbfb;
+}
+
+/* ==================================================
+   ÉTAPE 4 : FORMULAIRE
+   ================================================== */
+
+.formulaire {
+  /* TODO 4.1 : largeur maximale 850px, marge 30px auto 0 et padding 30px */
+  /* TODO */
+  /* TODO 4.1 : fond #f8fafb, bordure #dce5e9 et coins de 10px */
+  /* TODO */
+  max-width: 850px;
+  margin: 30px auto 0;
+  padding: 30px;
+  background-color: #f8fafb;
+  border: 1px solid #dce5e9;
+  border-radius: 10px;
+}
+
+/* Deux champs peuvent se placer sur la même ligne */
+.form-ligne {
+  /* TODO 4.2 : Flexbox, retour à la ligne et écart de 20px */
+  /* TODO */
+  /* TODO 4.2 : marge basse de 20px */
+  /* TODO */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.champ {
+  /* TODO 4.3 : Flexbox en colonne, flex: 1 1 250px et écart de 7px */
+  /* TODO */
+  /* TODO 4.3 : marge basse de 18px */
+  /* TODO */
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 250px;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.champ label {
+  /* TODO 4.3 : texte gras et couleur #173b57 */
+  /* TODO */
+  font-weight: bold;
+  color: #173b57;
+}
+
+/* Regrouper les trois types de champs dans un seul sélecteur */
+input,
+select,
+textarea {
+  /* TODO 4.4 : largeur 100%, padding 11px */
+  /* TODO */
+  /* TODO 4.4 : bordure, coins arrondis de 5px */
+  /* TODO */
+  /* TODO 4.4 : hériter de la police du parent et mettre un fond blanc */
+  /* TODO */ 
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #bdcbd2;
+  border-radius: 5px;
+  font: inherit;
+  background-color: #ffffff;
+
+/* TODO 4.5 : au focus, contour et bordure de couleur #087f8c */
+input:focus,
+select:focus,
+textarea:focus {
+  /* TODO */
+   outline: 2px solid #087f8c;
+   border-color: #087f8c;
+
+}
+
+fieldset {
+  /* TODO 4.6 : marge 10px 0 25px et padding 18px */
+  /* TODO */
+  /* TODO 4.6 : bordure #bdcbd2 et coins arrondis de 6px */
+  /* TODO */
+  margin: 10px 0 25px;
+  padding: 18px;
+  border: 1px solid #bdcbd2;
+  border-radius: 6px;
+}
+
+legend {
+  /* TODO 4.6 : padding 0 8px, couleur #173b57 et texte gras */
+  /* TODO */
+  padding:0 8px;
+  color: #173b57;
+  font-weight: bold;
+}
+
+/* Options du niveau */
+.choix {
+  /* TODO 4.7 : Flexbox, retour à la ligne et écart de 20px */
+  /* TODO */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.choix label {
+  /* TODO 4.7 : Flexbox, alignement vertical et écart de 7px */
+  /* TODO */
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.choix input {
+  /* TODO 4.7 : rétablir la largeur automatique des boutons radio */
+  /* TODO */
+  width: auto;
+}
+
+.form-actions {
+  /* TODO 4.8 : Flexbox, retour à la ligne, écart de 12px et marge haute de 20px */
+  /* TODO */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* ==================================================
+   ÉTAPE 5 : PIED DE PAGE ET BOUTON « HAUT »
+   ================================================== */
+
+.pied {
+  /* TODO 5.1 : Flexbox, répartition aux extrémités, alignement vertical,
+     retour à la ligne et écart de 15px */
+  /* TODO */
+  /* TODO 5.1 : padding 22px 24px, fond #173b57 et texte blanc */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 22px 24px;
+  background-color: #173b57;
+  color: #ffffff;;
+  /* TODO */
+}
+
+.pied p {
+  /* TODO 5.1 : supprimer la marge du paragraphe */
+  /* TODO */
+  margin: 0;
+
+}
+
+/* Bouton de retour en haut de page */
+.haut {
+  /* TODO 5.2 : position fixed, right 20px, bottom 80px et z-index 50 */
+  /* TODO */
+  /* TODO 5.2 : Flexbox pour centrer la flèche */
+  /* TODO */
+  /* TODO 5.2 : largeur et hauteur 44px, forme circulaire */
+  /* TODO */
+  /* TODO 5.2 : texte blanc, fond #087f8c, taille 1.3rem et sans soulignement */
+  /* TODO */
+  /* TODO 5.2 : ombre 0 4px 12px rgba(0, 0, 0, 0.25) */
+  /* TODO */
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #087f8c;
+  font-size: 1.3rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
